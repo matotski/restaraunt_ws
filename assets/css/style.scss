@@ -20,6 +20,12 @@ $font_title-color: #d67e34;
   font-weight: 400;
 }
 
+@font-face {
+  font-family: Cookie;
+  src: url(../fonts/Cookie-Regular.ttf);
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +76,7 @@ li {
 
   &__block {
     max-width: 485px;
-    margin-top: 300px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,8 +358,8 @@ li {
 
   &__img-part {
     img {
+      width: 100%;
     }
-    width: 100%;
   }
 }
 
@@ -417,5 +423,234 @@ li {
     @media (max-width: 1025px) {
       flex-direction: column;
     }
+  }
+}
+
+.chiefs {
+  padding-top: 137px;
+  padding-bottom: 87px;
+  &__title {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 107px;
+    span {
+      color: $font_title-color;
+
+      @media (max-width: 500px) {
+        margin-bottom: 53px;
+        gap: 17px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 100px;
+          gap: 22px;
+        }
+      }
+    }
+  }
+
+  &__cardholder {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media (max-width: 1025px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 147px;
+      gap: 26px;
+    }
+  }
+}
+
+.menu {
+  background: url(../img/menu-bg.png) no-repeat center center / cover;
+  padding: 94px 160px 226px 160px;
+
+  &__title {
+    color: #fff;
+    font-family: Tinos;
+    font-size: 54px;
+    font-weight: 400;
+    text-align: center;
+
+    margin-bottom: 138px;
+
+    @media (max-width: 768px) {
+      font-size: 46px;
+      padding: 47px 0px 93px 0px;
+    }
+    @media (max-width: 500px) {
+      font-size: 40px;
+      padding: 41px 0px 80px 0px;
+    }
+  }
+  &__cardholder {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media (max-width: 1025px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 147px;
+      gap: 26px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 100px;
+      gap: 22px;
+    }
+    @media (max-width: 500px) {
+      margin-bottom: 53px;
+      gap: 17px;
+    }
+  }
+
+  &__card {
+    background-color: #fff;
+    padding: 80px 63px 50px 63px;
+    text-align: center;
+    &:first-child {
+      display: block;
+
+      padding: 0px 63px 50px 0px;
+
+      .menu__img {
+        margin-left: 63px;
+        margin-top: 44px;
+      }
+
+      .circle-wrap {
+        margin-left: 63px;
+        text-align: right;
+        margin-top: -90px;
+
+        
+      }
+
+      .menu__subtitle {
+        margin-left: 63px;
+      }
+
+      .menu__text {
+        margin-left: 63px;
+      }
+
+      a {
+        margin-left: 63px;
+      }
+    }
+    & img {
+      border-radius: 50%;
+    }
+
+    @media (max-width: 1025px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 147px;
+      gap: 26px;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 100px;
+      gap: 22px;
+    }
+    @media (max-width: 500px) {
+      margin-bottom: 53px;
+      gap: 17px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__circle {
+    display: inline;
+    background-color: $font_title-color;
+    border-radius: 50%;
+    padding: 26px 25px;
+    color: #fff;
+    border: 8px solid #fff;
+    font-family: Cookie;
+    font-size: 30px;
+
+    
+  }
+
+  &__subtitle {
+    font-family: Tinos;
+    font-weight: 400;
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-family: OpenSans;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__btn {
+    background-color: $font_title-color;
+    padding: 14px 68px;
+    box-shadow: 5px 5px 10px #000;
+  }
+
+  .circle-wrap {
+    text-align: right;
+    margin-top: -70px;
+  }
+}
+
+.pin {
+  background-color: $font_title-color;
+  display: flex;
+  padding: 11px 12px;
+  max-width: 124px;
+  font-size: 13px;
+}
+
+.review {
+  background-color: #e5e5e5;
+  padding: 80px 104px 25px 104px;
+
+  @media (max-width: 1025px) {
+    display: block;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__text {
+
+    @media (max-width: 1025px) {
+      width: unset;
+    }
+
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 26px;
+    font-family: OpenSans;
+    width: 920px;
+    text-align: center;
+  }
+  &-wrap {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  &-item {
+    margin: 10px 0;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-family: OpenSans;
+  }
+
+  .ellipse-row {
+    margin-top: 20px;
   }
 }
